@@ -11,9 +11,18 @@ var finalpass = ""
 function generatePassword(){
 
 // prompt for password length
+function checkLength(){
 var getLength = prompt("How many characters would you like your password to be (8-128)?")
 
-console.log(getLength)
+if (getLength < 8 || getLength > 128) {
+  alert("Your password must be between 8 or 128 characters, please select again.")
+  };
+  checkLength();
+}
+// running the function to ensure user selects character number within specific limits
+checkLength();
+
+  console.log(getLength)
 
 // confirm statement for lower case characters
 var lower = confirm("Would you like to include lower case characters in your password?")
