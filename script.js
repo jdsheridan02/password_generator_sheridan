@@ -7,20 +7,19 @@ var allCharacters = ""
 var neededCharacters = ""
 var finalpass = ""
 
+
 // function to generate password dependent on length and other attributes
 function generatePassword(){
-
-// prompt for password length
-function checkLength(){
-var getLength = prompt("How many characters would you like your password to be (8-128)?")
-
-if (getLength < 8 || getLength > 128) {
-  alert("Your password must be between 8 or 128 characters, please select again.")
-  };
-  checkLength();
-}
+  
 // running the function to ensure user selects character number within specific limits
-checkLength();
+
+  var getLength = prompt("How many characters would you like your password to be (8-128)?")
+  
+  if (getLength < 8 || getLength > 128) {
+    alert("Your password must be between 8 or 128 characters, please select again.");
+  }
+  else {
+ 
 
   console.log(getLength)
 
@@ -99,7 +98,9 @@ console.log(finalpass)
 
 // inputs final pass that meets the criteria into the text box of HTML
 return finalpass
+  }
 }
+
 
   // Write password to the #password input
 function writePassword() {
@@ -111,3 +112,5 @@ function writePassword() {
 var generateBtn = document.querySelector("#generate");
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
